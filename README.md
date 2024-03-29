@@ -74,6 +74,14 @@ python3 -m http.server -d build-sim
 
 Finally, visit [watch.html](http://localhost:8000/watch.html) to see your work.
 
+
+```
+cd movement/make
+./make_alternate_fw.sh        
+python3 -m http.server -d ./firmware/simulate/deep_space_dave
+```
+
+
 License
 -------
 Different components of the project are licensed differently, see [LICENSE.md](https://github.com/joeycastillo/Sensor-Watch/blob/main/LICENSE.md).

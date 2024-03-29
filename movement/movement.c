@@ -53,6 +53,8 @@
 #include "alt_fw/the_stargazer.h"
 #elif MOVEMENT_FIRMWARE == MOVEMENT_FIRMWARE_DEEP_SPACE_NOW
 #include "alt_fw/deep_space_now.h"
+#elif MOVEMENT_FIRMWARE == MOVEMENT_FIRMWARE_DEEP_SPACE_DAVE
+#include "alt_fw/deep_space_dave.h"
 #endif
 
 #include "movement_custom_signal_tunes.h"

@@ -29,24 +29,29 @@
 #include "mars_time_face.h"
 
 // note: lander coordinates come from Mars24's `marslandmarks.xml` file
+// PF lon="326.74576" lat="19.09985"
 static double site_longitudes[MARS_TIME_NUM_SITES] = {
     0,                      // Mars Coordinated Time, at the meridian
+    360.0 - 326.74576,      // Pathfinder! lander site
     360.0 - 109.9,          // Zhurong lander site
-    360.0 - 77.45088572,    // Perseverance lander site
+    360.0 -  77.45088572,   // Perseverance lander site
     360.0 - 135.623447,     // InSight lander site
     360.0 - 137.441635,     // Curiosity lander site
 };
 
 static char site_names[MARS_TIME_NUM_SITES][3] = {
     "MC",
+    "PF",
     "ZH",
     "PE",
     "IN",
     "CU",
 };
 
+// https://en.wikipedia.org/wiki/Timekeeping_on_Mars
 static uint16_t landing_sols[MARS_TIME_NUM_SITES] = {
     0,
+    43905,
     52387,
     52304,
     51511,
